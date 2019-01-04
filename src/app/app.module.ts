@@ -12,12 +12,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListDisplayComponent } from './list-display/list-display.component';
 
 import { AppComponent } from './app.component';
+import { ToggleElementComponent } from './toggle-element/toggle-element.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListDisplayComponent
+    ListDisplayComponent,
+    ToggleElementComponent
   ],
   imports: [
     BrowserModule,
