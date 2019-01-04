@@ -1,0 +1,36 @@
+<button mat-raised-button color="primary" (click)="toggleStagger()">{{ (items.length > 0) ? 'Clear' : 'Create' }}
+  Stagger List</button>
+
+<!-- MatExpansionModule -->
+<mat-accordion #accordion multi="true" [@listAnimation]="items.length">
+  <mat-expansion-panel *ngFor="let item of items; index as i;">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ item.title }}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    {{ item.content }}
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!-- MatCardModule -->
+<!-- <div [@listAnimation]="items.length">
+  <mat-card *ngFor="let item of items; index as i;">
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-content>{{ item.content }}</mat-card-content>
+  </mat-card>
+</div> -->
+
+<!-- MatToolbarModule -->
+<!-- <div [@listAnimation]="items.length">
+  <mat-toolbar color="primary" *ngFor="let item of items; index as i;">
+    {{ item.title }}
+  </mat-toolbar>
+</div> -->
+
+<!-- MatGridListModule -->
+<!-- <mat-grid-list  [@listAnimation]="items.length" cols=2 rowHeight="100">
+  <mat-grid-tile *ngFor="let item of items; index as i;">
+    {{ item.title }}
+  </mat-grid-tile>
+</mat-grid-list> -->
