@@ -1,0 +1,19 @@
+<button mat-raised-button color="primary" (click)="state = (state === 'on') ? 'off' : 'on'">Toggle Visible</button>
+{{ state }}
+<div [@itemAnimation]="state">FOOBAR</div>
+
+<div [@itemAnimation]="state">
+  <mat-accordion #accordion multi="false" [@itemAnimation]="state">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            The panel Title
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, 
+        vitae. Fugit illum veritatis et exercitationem tenetur corporis 
+        ullam similique eligendi consequatur minima, fugiat ducimus, quia 
+        expedita porro repudiandae doloribus perspiciatis.
+      </mat-expansion-panel>
+    </mat-accordion>
+</div>
